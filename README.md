@@ -4,25 +4,25 @@
 
 ```java
 └──com.bo
-	└──result
-    	└──ResultCodeEnum.java				返回结果类枚举
-    	└──R.java							统一返回的结果对象
+    └──result
+    	└──ResultCodeEnum.java			返回结果类枚举
+    	└──R.java				统一返回的结果对象
     └──exception
     	└──GlobalExceptionHandler.java   	全局异常处理类
-    	└──CMSException.java				自定义异常类
+    	└──CMSException.java			自定义异常类
     └──config
-    	└──RedisConfig						自定义RedisTemplate<String,Object>配置类
-    	└──SwaggerConfiguration				knife4j配置类
+    	└──RedisConfig.java			自定义RedisTemplate<String,Object>配置类
+    	└──SwaggerConfiguration.java		knife4j配置类
     └──utils
-    	└──RedisUtil						封装的Redis工具类
-    	└──MailUtil							发送邮件工具类
-    	└──ExceptionUtil					打印异常工具类
+    	└──RedisUtil.java			封装的Redis工具类
+    	└──MailUtil.java			发送邮件工具类
+    	└──ExceptionUtil.java			打印异常工具类
     └──controller
-    	└──TestController					用于测试的controller
+    	└──TestController.java			用于测试的controller
     └──pojo
-    	└──Userinfo							用于测试的实体类
+    	└──Userinfo.java			用于测试的实体类
     └──mapper
-    	└──UserinfoMapper					用于测试的mapper
+    	└──UserinfoMapper.java			用于测试的mapper
     
 └──test
 	└──SpringbootQuickstartApplicationTests.java
