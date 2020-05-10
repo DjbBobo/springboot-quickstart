@@ -1,0 +1,47 @@
+spring:
+  # \u5F00\u53D1\u73AF\u5883
+  profiles:
+    active: dev
+  # \u6570\u636E\u5E93\u914D\u7F6E
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/music?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 1234
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #Spring Boot \u9ED8\u8BA4\u662F\u4E0D\u6CE8\u5165\u8FD9\u4E9B\u5C5E\u6027\u503C\u7684\uFF0C\u9700\u8981\u81EA\u5DF1\u7ED1\u5B9A
+    #druid \u6570\u636E\u6E90\u4E13\u6709\u914D\u7F6E
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+
+  #redis
+  redis:
+    host: 39.97.241.159
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 3000
+
+  # mail
+  mail:
+    username: 981745815@qq.com
+    password: bzjvlvlsmlrnbdhe
+    host: smtp.qq.com
+    # 开启加密验证
+    properties:
+      mail.smtp.ssl.enable: true
